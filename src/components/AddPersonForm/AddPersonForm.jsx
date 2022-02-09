@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { handleAdd } from '../../actions'
 
+/**
+ * Form for new contacts
+ * @component
+ * @example
+ */
 function AddPersonForm (props) {
   const [person, setPerson] = useState('')
 
@@ -9,8 +14,10 @@ function AddPersonForm (props) {
     setPerson(e.target.value)
   }
 
-  // We send person's value to corresponding dispatch function if we have a not empty value
-  // Then, we empty the text input
+  /**
+   * We send person's value to corresponding dispatch function if we have a not empty value
+   * Then, we empty the text input
+   */
   function addToList () {
     if (person === '') {
       alert('Enter a value, please')
